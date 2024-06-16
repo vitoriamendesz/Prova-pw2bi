@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prova</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+
+    <div class="titulo-principal">
+      <h1>Portal de Notícias do IBGE</h1>
+    </div>
+    
+    <div class="header-pesquisa">
+      <div class="barra-pesquisar">
+        <form class="form-buscar">
+          <input type="text" placeholder="Buscar notícia por termo">
+          <button type="submit">🔍</button>
+        </form>
+      </div>
+
+      <div class="icon-filtrar">
+        <svg
+          class="icone"
+          width="20"
+          height="20"
+          fill="#f0f0f0"
+          viewBox="0 0 80 90"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="m 0,0 30,45 0,30 10,15 0,-45 30,-45 Z"></path>
+        </svg>
+        <span class="icon-filtrar-contador">0</span>
+      </div>
+    </div>
+    
+    <dialog class="dialog-filtro">
+      <form class="form-dialog-filtro">
+        <div class="input-dialog-filtro">
+          <label for="tipo">Tipo:</label>
+          
+          <select name="tipo" id="tipo">
+            <option value>Selecione</option>
+            <option value="notícia">Notícias</option>
+            <option value="release">Releases</option>
+          </select>
+        </div>
+
+        <div class="input-dialog-filtro">
+          <label for="quantidade">Quantidade:</label>
+          
+          <select name="quantidade" id="quantidade">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+          </select>
+        </div>
+
+        <div class="input-dialog-filtro">
+          <label for="de">De:</label>
+          <input type="date" id="de" name="de">
+        </div>
+
+        <div class="input-dialog-filtro">
+          <label for="ate">Até:</label>
+          <input type="date" id="ate" name="ate">
+        </div>
+
+        <button class="dialog-filtro-fechar">X</button>
+        <button class="dialog-filtro-aplicar" type="submit">Aplicar</button>
+      </form>
+    </dialog>
+  </header>
+
+  <main>
+    <section>
+      <ul class="lista-noticias"></ul>
+      <ul class="lista-paginacao"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      &copy; Prova do segundo bimestre - Programação WEB
+    </p>
+  </footer>
+  
+  <script src="./script.js"></script>
+
+</body>
+</html>
